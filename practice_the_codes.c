@@ -1,15 +1,15 @@
 #include <stdio.h>
 int main(void) {
 
-	int num1, i,j;
-	const int MAX = 9;
+	int i = 0, j = 0;
 
-	for (i = 1;i <=MAX;i++) {
-		for (j = 0;j < MAX;++j) {
-			if (MAX < i + j+1)
-				printf("*");
+	for(i=0;i<5;++i){
+		for (j = 0;j < 5 + i;++j) {
+			if (i + j >= 4)printf("*\t");
 			else
-				putchar('-');
+			{
+				putchar('\t');
+			}
 		}
 		putchar('\n');
 	}
